@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.xjl.customview.DrawBitmapActivity">
+    tools:context="com.example.xjl.customview.DrawTextActivity">
 
-    <com.example.xjl.customview.customView.BitmapView
+    <com.example.xjl.customview.customView.DrawTextView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 </LinearLayout>
+

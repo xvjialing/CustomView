@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         colums.add("PieView");
         colums.add("CustomView");
         colums.add("drawPicture");
+        colums.add("drawBitmap");
+        colums.add("drawText");
         commonAdapter = new CommonAdapter<String>(this,R.layout.item,colums) {
             @Override
             protected void convert(ViewHolder holder, String s, int position) {
@@ -55,6 +57,12 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 2:
                         startActivity(new Intent(MainActivity.this,DrawPictureActivity.class));
+                        break;
+                    case 3:
+                        startActivity(new Intent(MainActivity.this,DrawBitmapActivity.class));
+                        break;
+                    case 4:
+                        startActivity(new Intent(MainActivity.this,DrawTextActivity.class));
                         break;
                 }
             }

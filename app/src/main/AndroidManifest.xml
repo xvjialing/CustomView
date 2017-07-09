@@ -20,7 +20,8 @@
         <activity android:name=".PieviewActivityActivity" />
         <activity android:name=".CustomActivity" />
         <activity android:name=".DrawPictureActivity" />
-        <activity android:name=".DrawBitmapActivity"></activity>
+        <activity android:name=".DrawBitmapActivity" />
+        <activity android:name=".DrawTextActivity"></activity>
     </application>
 
 </manifest>
