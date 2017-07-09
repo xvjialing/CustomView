@@ -1,4 +1,4 @@
-package com.example.xjl.customview;
+package com.example.xjl.customview.customView;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -63,8 +63,8 @@ public class CustomView extends View {
 
 //        绘制点：
 //        可以绘制一个点，也可以绘制一组点，如下：
-//        canvas.drawPoint(200,200,mPaint);
-//        canvas.drawPoints(new float[]{500,500,500,600},mPaint);
+        canvas.drawPoint(200,200,mPaint);
+        canvas.drawPoints(new float[]{500,500,500,600},mPaint);
 
 
 //        绘制直线：

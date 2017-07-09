@@ -1,4 +1,4 @@
-package com.example.xjl.customview.PieView;
+package com.example.xjl.customview.customView.PieView;
 
 /**
  * Created by xjl on 17-5-24.

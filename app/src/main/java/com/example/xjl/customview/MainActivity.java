@@ -1,20 +1,76 @@
 package com.example.xjl.customview;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
-import com.example.xjl.customview.PieView.PieData;
-import com.example.xjl.customview.PieView.PieView;
+import com.zhy.adapter.recyclerview.CommonAdapter;
+import com.zhy.adapter.recyclerview.MultiItemTypeAdapter;
+import com.zhy.adapter.recyclerview.base.ViewHolder;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    private RecyclerView rv_main;
+
+    private List<String> colums=new ArrayList<>();
+    private CommonAdapter<String> commonAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initView();
 
+        initData();
+
+
+    }
+
+    private void initData() {
+        colums.add("PieView");
+        colums.add("CustomView");
+        colums.add("drawPicture");
+        commonAdapter = new CommonAdapter<String>(this,R.layout.item,colums) {
+            @Override
+            protected void convert(ViewHolder holder, String s, int position) {
+                holder.setText(R.id.item_text,s);
+            }
+        };
+        commonAdapter.setOnItemClickListener(new MultiItemTypeAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, RecyclerView.ViewHolder holder, int position) {
+                switch (position){
+                    case 0:
+                        startActivity(new Intent(MainActivity.this,PieviewActivityActivity.class));
+                        break;
+                    case 1:
+                        startActivity(new Intent(MainActivity.this,CustomActivity.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(MainActivity.this,DrawPictureActivity.class));
+                        break;
+                }
+            }
+
+            @Override
+            public boolean onItemLongClick(View view, RecyclerView.ViewHolder holder, int position) {
+                return false;
+            }
+        });
+
+        rv_main.setAdapter(commonAdapter);
+    }
+
+    private void initView() {
+        rv_main = (RecyclerView) findViewById(R.id.rv_main);
+        LinearLayoutManager manager=new LinearLayoutManager(this);
+        rv_main.setLayoutManager(manager);
     }
 }

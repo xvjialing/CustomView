@@ -4,14 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.xjl.customview.MainActivity">
+    tools:context="com.example.xjl.customview.DrawPictureActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_main"
+    <com.example.xjl.customview.customView.PictureView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent" />
 
 </LinearLayout>

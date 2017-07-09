@@ -3,8 +3,8 @@ package com.example.xjl.customview;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.xjl.customview.PieView.PieData;
-import com.example.xjl.customview.PieView.PieView;
+import com.example.xjl.customview.customView.PieView.PieData;
+import com.example.xjl.customview.customView.PieView.PieView;
 
 import java.util.ArrayList;
 
