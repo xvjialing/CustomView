@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         colums.add("drawPath");
         colums.add("nest");
         colums.add("Bezier");
+        colums.add("Bezier2");
         commonAdapter = new CommonAdapter<String>(this,R.layout.item,colums) {
             @Override
             protected void convert(ViewHolder holder, String s, int position) {
@@ -75,6 +76,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 7:
                         startActivity(new Intent(MainActivity.this,SecondBezierActivity.class));
+                        break;
+                    case 8:
+                        startActivity(new Intent(MainActivity.this,Bezier2Activity.class));
                         break;
                 }
             }

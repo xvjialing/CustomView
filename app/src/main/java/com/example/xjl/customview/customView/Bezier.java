@@ -13,6 +13,7 @@ import android.view.View;
 
 /**
  * Created by xjl on 17-7-10.
+ * 二阶贝塞尔曲线
  */
 
 public class Bezier extends View{
