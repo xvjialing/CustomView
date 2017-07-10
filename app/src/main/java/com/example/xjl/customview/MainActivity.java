@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         colums.add("drawPicture");
         colums.add("drawBitmap");
         colums.add("drawText");
+        colums.add("drawPath");
+        colums.add("nest");
+        colums.add("Bezier");
         commonAdapter = new CommonAdapter<String>(this,R.layout.item,colums) {
             @Override
             protected void convert(ViewHolder holder, String s, int position) {
@@ -63,6 +66,15 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 4:
                         startActivity(new Intent(MainActivity.this,DrawTextActivity.class));
+                        break;
+                    case 5:
+                        startActivity(new Intent(MainActivity.this,DrawPathActivity.class));
+                        break;
+                    case 6:
+                        startActivity(new Intent(MainActivity.this,PathNestActivity.class));
+                        break;
+                    case 7:
+                        startActivity(new Intent(MainActivity.this,SecondBezierActivity.class));
                         break;
                 }
             }

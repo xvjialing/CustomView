@@ -21,7 +21,11 @@
         <activity android:name=".CustomActivity" />
         <activity android:name=".DrawPictureActivity" />
         <activity android:name=".DrawBitmapActivity" />
-        <activity android:name=".DrawTextActivity"></activity>
+        <activity android:name=".DrawTextActivity" />
+        <activity android:name=".DrawPathActivity" />
+        <activity android:name=".ProgressActivity" />
+        <activity android:name=".PathNestActivity" />
+        <activity android:name=".SecondBezierActivity"></activity>
     </application>
 
 </manifest>
