@@ -26,7 +26,10 @@
         <activity android:name=".ProgressActivity" />
         <activity android:name=".PathNestActivity" />
         <activity android:name=".SecondBezierActivity" />
-        <activity android:name=".Bezier2Activity"></activity>
+        <activity android:name=".Bezier2Activity" />
+        <activity android:name=".Bezier3Activity" />
+        <activity android:name=".PathMeasureActivity" />
+        <activity android:name=".PathViewActivity"></activity>
     </application>
 
 </manifest>
